@@ -1,48 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Trip Planner - Main Page</title>
-    <!-- Add your CSS stylesheets or links here -->
-    <style>
-        /* Example styles for navigation */
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        li {
-            display: inline;
-            margin-right: 20px;
-        }
-        a {
-            text-decoration: none;
-            color: #333;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Welcome to Trip Planner</h1>
-        <nav>
-            <ul>
-                <li><a href="profile.html">My Profile</a></li>
-                <li><a href="trips.html">Trips</a></li>
-                <li><a href="destination.html">Destinations</a></li>
-            </ul>
-        </nav>
-    </header>
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
 
-    <main>
-        <!-- Your main content goes here -->
-        <p>This is the main content area of your website.</p>
-        <!-- You can add more content here -->
-    </main>
+const app = express();
 
-    <footer>
-        <!-- Your footer content goes here -->
-        <p>&copy; 2023 YourTripPlanner.com</p>
-        <!-- You can add more footer content here -->
-    </footer>
-</body>
-</html>
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+ secret: 'secret',
+ resave: false,
+ saveUninitialized: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new LocalStrategy(
+ function(username, password, done) {
+    // Validate user and password
+ }
+));
+
+passport.serializeUser(function(user, done) {
+ done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+ // Load user and password from the database
+});
+
+app.post('/login', passport.authenticate('local', {
+ successRedirect: '/',
+ failureRedirect: '/login',
+ failureFlash: true
+}));
+
+app.get('/', isAuthenticated, function(req, res) {
+ res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+function isAuthenticated(req, res, next) {
+ if (req.isAuthenticated())
+    return next();
+ res.redirect('/login');
+}
+
+app.listen(3000, function() {
+ console.log('Server is running on port 3000');
+});
