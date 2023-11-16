@@ -32,5 +32,80 @@
         </li>
       </ul>
     </div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trip Planner - Main Page</title>
+    <!-- Add your CSS stylesheets or links here -->
+    <style>
+        /* Example styles for navigation and search bar */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline;
+            margin-right: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        .search-container {
+            margin-top: 20px;
+        }
+        .search-container input[type=text] {
+            padding: 8px;
+            margin-right: 10px;
+            width: 200px;
+        }
+        .search-container button {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Trip Planner</h1>
+        <nav>
+            <ul>
+                <li><a href="destinations.php">Destinations</a></li>
+                <li><a href="trips.php">Trips</a></li>
+                <li><a href="profile.php">My Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Your main content goes here -->
+        <div class="search-container">
+            <form action="" method="GET">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <?php
+        if (isset($_GET['search'])) {
+            $search_query = $_GET['search'];
+            echo "<p>You searched for: " . htmlspecialchars($search_query) . "</p>";
+            // Process your search query here or interact with the database accordingly
+        }
+        ?>
+
+        <p>This is the main content area of your website.</p>
+        <!-- You can add more content here -->
+    </main>
+
+    <footer>
+        <!-- Your footer content goes here -->
+        <p>&copy; 2023 YourTripPlanner.com</p>
+        <!-- You can add more footer content here -->
+    </footer>
+</body>
+</html>
+
   </div>
 </nav>
