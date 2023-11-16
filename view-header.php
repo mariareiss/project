@@ -36,11 +36,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Trip Planner - Main Page</title>
-    <!-- Add your CSS stylesheets or links here -->
-    <style>
-        /* Example styles for navigation and search bar */
-        ul {
+    
             list-style-type: none;
             margin: 0;
             padding: 0;
@@ -67,19 +63,8 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Trip Planner</h1>
-        <nav>
-            <ul>
-                <li><a href="destinations.php">Destinations</a></li>
-                <li><a href="trips.php">Trips</a></li>
-                <li><a href="profile.php">My Profile</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Your main content goes here -->
+  
+  <main>
         <div class="search-container">
             <form action="" method="GET">
                 <input type="text" placeholder="Search..." name="search">
@@ -93,19 +78,8 @@
             echo "<p>You searched for: " . htmlspecialchars($search_query) . "</p>";
             // Process your search query here or interact with the database accordingly
         }
-        ?>
-
-        <p>This is the main content area of your website.</p>
-        <!-- You can add more content here -->
-    </main>
-
-    <footer>
-        <!-- Your footer content goes here -->
-        <p>&copy; 2023 YourTripPlanner.com</p>
-        <!-- You can add more footer content here -->
-    </footer>
-</body>
-</html>
-
+        ?>       
+      </body>
+    </html>
   </div>
 </nav>
