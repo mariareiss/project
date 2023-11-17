@@ -81,6 +81,21 @@
         }
         ?>       
       </body>
+     <p>Click the button to change the background color:</p>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+    function changeBackgroundColor() {
+            document.body.style.backgroundColor = getRandomColor();
+        }
+
+        function getRandomColor() {
+            const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
     </html>
   </div>
 </nav>
