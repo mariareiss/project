@@ -61,22 +61,26 @@
                 </div>
             </div>
         </nav>
-        <main>
-            <div class="search-container">
-                <form action="" method="GET">
-                    <input type="text" placeholder="Search..." name="search">
-                    <button type="submit">Search</button>
-                </form>
+        <main class="row">
+            <div class="col-md-8">
+                <p>Interaction Box</p>
+                <button onclick="changeBackgroundColor()">Change Style</button>
             </div>
-            <?php
-            if (isset($_GET['search'])) {
-                $search_query = $_GET['search'];
-                echo "<p>You searched for: " . htmlspecialchars($search_query) . "</p>";
-                // Process your search query here or interact with the database accordingly
-            }
-            ?>   
-            <p>Interaction Box</p>
-            <button onclick="changeBackgroundColor()">Change Style</button>
+            <div class="col-md-4">
+                <div class="search-container">
+                    <form action="" method="GET">
+                        <input type="text" placeholder="Search..." name="search">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+                <?php
+                if (isset($_GET['search'])) {
+                    $search_query = $_GET['search'];
+                    echo "<p>You searched for: " . htmlspecialchars($search_query) . "</p>";
+                    // Process your search query here or interact with the database accordingly
+                }
+                ?> 
+            </div>
         </main>
     </div>
     <script>
@@ -92,7 +96,5 @@
             return color;
         }
     </script>
-
 </body>
 </html>
-
