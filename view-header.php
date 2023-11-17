@@ -36,6 +36,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+  <style>
     ul {
             list-style-type: none;
             margin: 0;
