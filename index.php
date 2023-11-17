@@ -1,8 +1,9 @@
 <?php
 $pageTitle = "Home";
-include "view-header.php";
 ?>
-    <h1>Trip Planner</h1>
+    <h1>Welcome to Trip Planner!</h1>
 <?php
+include "view-header.php";
+
 include "view-footer.php";
 ?>
