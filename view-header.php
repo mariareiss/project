@@ -69,25 +69,21 @@
                     <button type="submit">Search</button>
                 </form>
             </div>
-
             <?php
             if (isset($_GET['search'])) {
                 $search_query = $_GET['search'];
                 echo "<p>You searched for: " . htmlspecialchars($search_query) . "</p>";
                 // Process your search query here or interact with the database accordingly
             }
-            ?>
-            
-            <p>Click the button to change the background color:</p>
-            <button onclick="changeBackgroundColor()">Change Background Color</button>
+            ?>   
+            <p>Interaction Box</p>
+            <button onclick="changeBackgroundColor()">Change Style</button>
         </main>
     </div>
-
     <script>
         function changeBackgroundColor() {
             document.body.style.backgroundColor = getRandomColor();
         }
-
         function getRandomColor() {
             const letters = "0123456789ABCDEF";
             let color = "#";
