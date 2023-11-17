@@ -1,43 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?=$pageTitle?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Project</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"/>Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="profile.php">My Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="trips.php">Trips</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="destinations.php">Destinations</a>
-          <li class="nav-item">
-          <a class="nav-link" href="packing.php">Packing List</a>
-        </li>
-      </ul>
-    </div>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-  <style>
-    ul {
+    <style>
+        ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
@@ -64,26 +33,58 @@
     </style>
 </head>
 <body>
-  
-  <main>
-        <div class="search-container">
-            <form action="" method="GET">
-                <input type="text" placeholder="Search..." name="search">
-                <button type="submit">Search</button>
-            </form>
-        </div>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Project</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"/>Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.php">My Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="trips.php">Trips</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="destinations.php">Destinations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="packing.php">Packing List</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-        <?php
-        if (isset($_GET['search'])) {
-            $search_query = $_GET['search'];
-            echo "<p>You searched for: " . htmlspecialchars($search_query) . "</p>";
-            // Process your search query here or interact with the database accordingly
-        }
-        ?>       
-      </body>
-     <p>Click the button to change the background color:</p>
-    <button onclick="changeBackgroundColor()">Change Background Color</button>
-    function changeBackgroundColor() {
+        <main>
+            <div class="search-container">
+                <form action="" method="GET">
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+
+            <?php
+            if (isset($_GET['search'])) {
+                $search_query = $_GET['search'];
+                echo "<p>You searched for: " . htmlspecialchars($search_query) . "</p>";
+                // Process your search query here or interact with the database accordingly
+            }
+            ?>
+            
+            <p>Click the button to change the background color:</p>
+            <button onclick="changeBackgroundColor()">Change Background Color</button>
+        </main>
+    </div>
+
+    <script>
+        function changeBackgroundColor() {
             document.body.style.backgroundColor = getRandomColor();
         }
 
@@ -95,7 +96,8 @@
             }
             return color;
         }
+    </script>
 
-    </html>
-  </div>
-</nav>
+</body>
+</html>
+
