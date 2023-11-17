@@ -61,7 +61,6 @@
                 </div>
             </div>
         </nav>
-
         <main>
             <div class="search-container">
                 <form action="" method="GET">
