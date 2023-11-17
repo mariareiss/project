@@ -6,6 +6,10 @@
     <title><?=$pageTitle?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
+        body {
+            background-color: #ADD8E6; 
+        }
+    <style>
         ul {
             list-style-type: none;
             margin: 0;
@@ -61,11 +65,6 @@
                 </div>
             </div>
         </nav>
-        <main class="row">
-            <div class="col-md-8">
-                <p>Interaction Box</p>
-                <button onclick="changeBackgroundColor()">Change Style</button>
-            </div>
             <div class="col-md-4">
                 <div class="search-container">
                     <form action="" method="GET">
@@ -83,18 +82,6 @@
             </div>
         </main>
     </div>
-    <script>
-        function changeBackgroundColor() {
-            document.body.style.backgroundColor = getRandomColor();
-        }
-        function getRandomColor() {
-            const letters = "0123456789ABCDEF";
-            let color = "#";
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-    </script>
+   
 </body>
 </html>
