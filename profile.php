@@ -29,7 +29,7 @@ if (isset($_POST['actionType'])) {
     break;
   }
 }
-$profiles = selectProfile();
+$profile = selectProfile();
 include "view-profile.php";
 include "view-footer.php";
 ?>
