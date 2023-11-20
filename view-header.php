@@ -50,7 +50,7 @@
                             <a class="nav-link active" aria-current="page" href="#"/>Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="profile.php">My Profile</a>
+                            <a class="nav-link" href="profile.php">Profiles</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="trips.php">Trips</a>
