@@ -4,7 +4,7 @@ require_once("model-profile.php");
 
 $pageTitle = "My Profile";
 include "view-header.php";
-$profile = selectProfiles();
+$profile = selectProfile();
 include "view-profile.php";
 include "view-footer.php";
 ?>
