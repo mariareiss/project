@@ -53,7 +53,7 @@ while ($profiles = $profile->fetch_assoc()){
     </td>
     <td>
       <form method="post" action="trips.php">
-        <input type="hidden" name="uid" value="<?php echo $customer['customer_id'];?>">
+        <input type="hidden" name="uid" value="<?php echo $profiles['user_id'];?>">
         
 </form>
     </td>
