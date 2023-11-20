@@ -18,15 +18,15 @@
         <form method="post" action="">
   <div class="mb-3">
     <label for="uName<?php echo $profiles['user_id'];?>" class="form-label">User Name</label>
-    <input type="text" class="form-control" id="uName<?php echo $profiles['user_id'];?>" name="uName" value="?php echo $profiles['user_name'];?>">
+    <input type="text" class="form-control" id="uName<?php echo $profiles['user_id'];?>" name="uName" value="<?php echo $profiles['user_name'];?>">
   </div>
   <div class="mb-3">
     <label for="uEmail<?php echo $customer['customer_id'];?>" class="form-label">User Email</label>
-    <input type="text" class="form-control" id="uEmail<?php echo $profiles['user_id'];?>" name="uEmail" value="?php echo $profiles['user_email'];?>">
+    <input type="text" class="form-control" id="uEmail<?php echo $profiles['user_id'];?>" name="uEmail" value="<?php echo $profiles['user_email'];?>">
   </div>
   <div class="mb-3">
     <label for="uPassword<?php echo $profiles['user_id'];?>" class="form-label">User Password</label>
-    <input type="text" class="form-control" id="uPassword<?php echo $profiles['user_id'];?>" name="uPassword" value="?php echo $profiles['user_password'];?>">
+    <input type="text" class="form-control" id="uPassword<?php echo $profiles['user_id'];?>" name="uPassword" value="<?php echo $profiles['user_password'];?>">
   </div>
     <input type="hidden" name="uid" value="<?php echo $profiles['user_id'];?>">
     <input type="hidden" name="actionType" value="Edit">
