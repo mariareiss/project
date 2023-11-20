@@ -1,4 +1,4 @@
-<h1>My Profile</h1>
+<h1>Profiles</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
@@ -7,7 +7,6 @@
       <th>Name</th>
       <th>Email</th>
       <th>Password</th>  
-      <th></th>
       </tr>
     </thead>
     <tbody>
