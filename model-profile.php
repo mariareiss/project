@@ -15,7 +15,7 @@ function selectProfile() {
 function insertProfile($uName, $uEmail, $uPassword) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `User` (`user_name`, `user_email`, `user_password`) VALUES (?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO `User`(`user_name`, `user_email`, `user_password`) VALUES (?,?,?);");
         $stmt->bind_param("sss", $uName, $uEmail, $uPassword);
         $success = $stmt->execute();
         $conn->close();
