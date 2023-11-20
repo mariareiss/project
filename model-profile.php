@@ -41,7 +41,7 @@ function updateProfile($uName, $uEmail, $uPassword, $uid) {
 function deleteProfile($uid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from `User` where customer_id=?");
+        $stmt = $conn->prepare("delete from `User` where user_id=?");
         $stmt->bind_param("i", $uid);
         $success = $stmt->execute();
         $conn->close();
