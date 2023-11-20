@@ -12,13 +12,13 @@
     </thead>
     <tbody>
 <?php
-while ($profile = $profiles->fetch_assoc()){
+while ($profiles = $profile->fetch_assoc()){
 ?>
   <tr>
-   <td><?php echo $profile['user_id'];?></td> 
-   <td><?php echo $profile['user_name'];?></td>
-   <td><?php echo $profile['user_email'];?></td>
-   <td><?php echo $profile['user_password'];?></td>
+   <td><?php echo $profiles['user_id'];?></td> 
+   <td><?php echo $profiles['user_name'];?></td>
+   <td><?php echo $profiles['user_email'];?></td>
+   <td><?php echo $profiles['user_password'];?></td>
 
   </tr>
 <?php
