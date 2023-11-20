@@ -1,5 +1,5 @@
 <?php
-function selectProfiles() {
+function selectProfile() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT user_id, user_name, user_email, user_password FROM `User`");        
