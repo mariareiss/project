@@ -2,7 +2,7 @@
 require_once("util-db.php");
 require_once("model-profile.php");
 
-$pageTitle = "Profiles";
+$pageTitle = "Profile";
 include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']){
@@ -29,7 +29,7 @@ if (isset($_POST['actionType'])) {
     break;
   }
 }
-$customers = selectProfile();
+$profiles = selectProfile();
 include "view-profile.php";
 include "view-footer.php";
 ?>
