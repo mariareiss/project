@@ -9,6 +9,7 @@
         body {
             background-color: #ADD8E6; 
         }
+    </style>
     <style>
         ul {
             list-style-type: none;
